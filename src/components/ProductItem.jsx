@@ -1,5 +1,5 @@
 import "./ProductItem.css";
-
+import ProductInfo from "./ProductInfo";
 function ProductItem({ product }) {
   const { imageUrl, productName, productPrice } = product;
 
@@ -8,10 +8,10 @@ function ProductItem({ product }) {
       <div className="product-image">
         <img src={imageUrl} alt="" />
       </div>
-      <div className="product-info">
+      <ProductInfo>
         <h2>{productName}</h2>
-        <span>{productPrice}₺</span>
-      </div>
+        <span>{productPrice} TL</span>
+      </ProductInfo>
     </div>
   );
 }

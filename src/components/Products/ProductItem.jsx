@@ -3,6 +3,10 @@ import ProductInfo from "./ProductInfo";
 const ProductItem = ({ product }) => {
   const { imageUrl, productName, productPrice } = product;
 
+  const clickHandler = () => {
+    console.log("Sepete eklendi")
+  }
+  
   return (
     <div className="product-item">
       <div className="product-image">
@@ -11,6 +15,8 @@ const ProductItem = ({ product }) => {
       <ProductInfo>
         <h2>{productName}</h2>
         <span>{productPrice} TL</span>
+        <br />
+        <button onClick={clickHandler}>Sepete Ekle</button>
       </ProductInfo>
     </div>
   );

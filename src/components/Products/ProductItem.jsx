@@ -1,6 +1,6 @@
 import "./ProductItem.css";
 import ProductInfo from "./ProductInfo";
-function ProductItem({ product }) {
+const ProductItem = ({ product }) => {
   const { imageUrl, productName, productPrice } = product;
 
   return (

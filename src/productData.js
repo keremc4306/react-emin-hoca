@@ -1,7 +1,4 @@
-import ProductItem from "./ProductItem";
-import "./Products.css";
-
-const productData = [
+export const productData = [
   {
     productName: "Soda",
     imageUrl:
@@ -21,23 +18,3 @@ const productData = [
     productPrice: 100,
   },
 ];
-
-function Products() {
-  return (
-    <div className="product-wrapper">
-      <h1>Products</h1>
-      <div className="products">
-        {productData.map((product) => {
-          return (
-            <ProductItem
-              key={product.productName}
-              product={product}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-export default Products;

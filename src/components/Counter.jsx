@@ -1,22 +1,10 @@
-import { useState } from "react";
-
-const Counter = () => {
-  const [counter, setCounter] = useState(0);
-
-  const increase = () => {
-    setCounter(counter + 1);
-  }
- 
-  const decrease = () => {
-    if (counter > 0) {
-        setCounter(counter - 1);
-    }
-};
+const Counter = (props) => {
+  const {counter, setCounter, children} = props;
   return (
     <div>
-        <button onClick={increase}>+</button>
-        <span>{counter}</span>
-        <button onClick={decrease}>-</button>
+        <button onClick={() => setCounter(counter+1)}>+</button>
+        {children}
+        <button onClick={() => setCounter(counter-1)}>-</button>
     </div>
   )
 }

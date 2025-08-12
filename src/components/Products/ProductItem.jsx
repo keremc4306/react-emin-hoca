@@ -1,12 +1,14 @@
 import "./ProductItem.css";
 import ProductInfo from "./ProductInfo";
 import {useState} from "react";
+import Counter from "../Counter";
 
 const ProductItem = ({ product }) => {
   const { imageUrl, productName, productPrice } = product;
   //let title = productName;
   
   const [title, setTitle] = useState(productName);
+  const [counter, setCounter] = useState(productPrice);
 
   const clickHandler = () => {
     setTitle("Güncellendi");
@@ -20,7 +22,9 @@ const ProductItem = ({ product }) => {
       </div>
       <ProductInfo>
         <h2>{title}</h2>
-        <span>{productPrice} TL</span>
+        <Counter productPrice = {productPrice} counter={counter} setCounter={setCounter}>
+          <span>{counter} ₺</span>
+        </Counter>
         <br />
         <button onClick={clickHandler}>Güncelle</button>
       </ProductInfo>

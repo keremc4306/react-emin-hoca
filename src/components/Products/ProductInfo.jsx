@@ -1,7 +1,7 @@
 const ProductInfo = (props) => {
   return (
     <div className="product-info">
-        <span className="ad">Reklam</span>
+        <span className="ad">yemeksepeti.com</span>
         {props.children}
     </div>
   )

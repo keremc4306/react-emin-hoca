@@ -9,24 +9,27 @@ const ProductForm = () => {
   });
 
   const titleChangeHandler = (event) => {
-    setProductData({
-      ...productData,
-      productName: event.target.value
+    setProductData((prevState) => {
+      return {
+        ...prevState, productName: event.target.value
+      }
     });
   }
 
   const priceChangeHandler = (event) => {
-    setProductData({
-      ...productData,
-      productPrice: event.target.value
-    })
+    setProductData((prevState) => {
+      return {
+        ...prevState, productPrice: event.target.value
+      }
+    });
   }
 
   const imageChangeHandler = (event) => {
-    setProductData({
-      ...productData,
-      imageUrl: event.target.value
-    })
+    setProductData((prevState) => {
+      return {
+        ...prevState, productPrice: event.target.value
+      }
+    });
   }
 
   console.log(productData);
